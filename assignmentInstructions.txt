@@ -1,0 +1,14 @@
+Must be a DFA
+    model a transition table
+    keep track of the state
+
+first create a DFA state diagram
+
+reject whitespace
+
+due date 6/1
+
+only one file
+
+
+accepting input: 0 through 9, +, -, ., e, E

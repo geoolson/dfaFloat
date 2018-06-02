@@ -1,0 +1,39 @@
+/*
+   The c language does not accept the following as floats:
+   50e 
+   50f
+   50 e 33
+   .5E2fl   looks like combining f and l suffix is bad
+   .5E2ul;
+   .5E -2;
+   .5E- 2;
+   12..0e33l;
+
+   The following in the test function are accepted as floating point numbers
+ */
+void test(){
+    double a[20];
+    a[0] = 50;
+    a[1] = -50l;
+    a[2] = - 50;
+    a[3] = 0x5a;
+    a[4] = 50e33;
+    a[5] = + 50e33;
+    a[6] = + 50e33l;
+    a[7] = + 5.0e33l;
+    a[8] = + 5.0E2l;
+    a[9] = 5E2f;
+    a[10] = + .5E-2;
+    a[11] = + 7.0e33l;
+    a[12] = + 10.0e33l;
+    a[13] = + 11.0e33l;
+    a[14] = + 12.0e33l;
+    a[15] = + 45.0e33l;
+    a[16] = + 65.0e33l;
+    a[17] = + 12.0e33l;
+    a[18] = + 78.0e33D;
+    a[19] = + 19.0e33d;
+    for(int i = 0; i< 20; ++i){
+        printf("element %i: %f\n",i,a[i]);
+    }
+}
